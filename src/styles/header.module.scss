@@ -1,0 +1,21 @@
+.header {
+  // border: 2px solid red;
+  margin: 0;
+  height:  10%;
+  display: flex;
+  justify-content: center; 
+  align-items:center;
+  border-top: 2px solid grey;
+}
+
+.userdata {
+  // border: 2px solid black;
+  width: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

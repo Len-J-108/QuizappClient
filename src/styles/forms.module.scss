@@ -1,0 +1,64 @@
+.formCard {
+  // border: 1px solid red;
+  // width: 100%;
+  border-radius: 12%;
+  box-shadow: 2px 2px 20px -10px  lightgray;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 450px;
+}
+
+.formCardHeading {
+  align-self: start;
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+
+.formCardForm {
+  padding: 1rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  gap: .5rem;
+  // gap: minmax(.2rem, 1rem);
+  // justify-content: center;
+}
+
+.formCardLabel {
+  color: rgb(204, 133, 0);
+  letter-spacing: 2px;
+}
+
+.formCardInput {
+  width: clamp(200px, 50%, 400px);
+  background: transparent;
+  height: 30px;
+  border: 1px solid rgb(74, 174, 255);
+  border-radius: 3px;
+  // color: orange;
+  color: inherit;
+  display: flex;
+  padding-inline: .7rem
+}
+
+.formCardInput:focus {
+  border: none;
+  outline: 3px solid green;
+}
+
+
+.error {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  font-size: 9px;
+  color: rgb(236, 87, 87);
+}
+
+.addQuestionRider {
+  
+}

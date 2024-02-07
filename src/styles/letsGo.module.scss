@@ -1,0 +1,48 @@
+@keyframes leaveY {
+  25% {
+    transform: rotateY(5deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  75% {
+    transform: rotateY(-5deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.btnWrapper {
+  // border: 2px solid red;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 30px;
+}
+
+.btn {
+  background: inherit;
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  color: rgb(120, 2, 255);
+  letter-spacing: 2px;
+  font-weight: 900;
+  box-shadow: inset 12px 12px 20px -8px rgb(204, 197, 197), -4px -4px 20px -8px rgb(204, 197, 197);
+  width: 150px;
+  height: 80px;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  animation: leaveY 4s infinite;
+  animation-timing-function: ease-in-out;
+  transition: filter 1.5s;
+}
+
+.btn:hover {
+  animation: none;
+  filter: grayscale(1);
+}

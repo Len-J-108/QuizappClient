@@ -1,0 +1,175 @@
+.stufen {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 5/6;
+    grid-row: 3/4;
+}
+
+.stufe10 {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    width: 200px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    font-weight: bolder;
+}
+
+.stufe9 {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    width: 180px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    font-weight: bolder;
+}
+
+.stufe8 {
+    border: 1px solid black;
+    border-radius: 50px;
+    width: 160px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    background-color: orange;
+    font-weight: bolder;
+}
+
+.stufe7 {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    width: 140px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    font-weight: bolder;
+}
+
+.stufe6 {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    width: 120px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    font-weight: bolder;
+}
+
+.stufe5 {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    font-weight: bolder;
+}
+
+.stufe4 {
+    border: 1px solid black;
+    border-radius: 50px;
+    width: 80px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    background-color: orange;
+    font-weight: bolder;
+}
+
+.stufe3 {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    width: 60px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    font-weight: bolder;
+}
+
+.stufe2 {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    width: 40px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    font-weight: bolder;
+}
+
+.stufe1 {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    width: 20px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    font-weight: bolder;
+}
+.text{
+    font-size: 1.5em;
+    text-shadow: 1px 1px 1px black;
+}
+.pyramide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 768px) {
+    .stufen {
+            grid-column: 3/4;
+            grid-row: 4/9;
+        }
+    
+        .stufe10 {
+            width: 100px;
+            height: 10px;
+        }
+    
+        .stufe9 {
+            width: 90px;
+            height: 10px;
+        }
+    
+        .stufe8 {
+            width: 80px;
+            height: 10px;
+        }
+    
+        .stufe7 {
+            width: 70px;
+            height: 10px;
+        }
+    
+        .stufe6 {
+            width: 60px;
+            height: 10px;
+        }
+    
+        .stufe5 {
+            width: 50px;
+            height: 10px;
+        }
+    
+        .stufe4 {
+            width: 40px;
+            height: 10px;
+        }
+    
+        .stufe3 {
+            width: 30px;
+            height: 10px;
+        }
+    
+        .stufe2 {
+            width: 20px;
+            height: 10px;
+        }
+    
+        .stufe1 {
+            width: 10px;
+            height: 10px;
+        }
+    }
