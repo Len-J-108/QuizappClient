@@ -1,0 +1,11 @@
+.heart {
+  font-size: 2rem;
+  /* left: -50px; */
+}
+
+.red {
+  color: rgb(199, 1, 1);
+}
+.gray {
+  color: rgb(187, 186, 186);
+}

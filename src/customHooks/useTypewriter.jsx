@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import cl from '../styles/questionsMatrix.module.scss'
+import ut from '../styles/utilities.module.scss';
 
 const Typewriter = ({ text, delay }) => {
   const [currentText, setCurrentText] = useState('');

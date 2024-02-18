@@ -1,11 +1,13 @@
 import ShowUserData from "./components/ShowUserData.jsx";
 import Navbar from "./Navbar.jsx";
-import classes from "./styles/header.module.scss";
+import cl from "./styles/header.module.scss";
 
 const Header = () => {
   return (
-    <header className={classes.header}>
+    <header className={cl.header}>
+      {/* <div> */}
       <ShowUserData />
+      {/* </div> */}
       <Navbar />
     </header>
   );

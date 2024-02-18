@@ -10,6 +10,7 @@ import { motion } from "framer-motion"
 import SpinnerOne from "./components/SpinnerOne.jsx";
 import LetsGo from "./elements/LetsGo.jsx";
 import utilities from './styles/utilities.module.scss';
+import cl from './styles/gamePage.module.scss';
 
 const GamePage = () => {
   const {
@@ -56,12 +57,12 @@ const GamePage = () => {
   
   return ( 
     <Suspense fallback={<SpinnerOne />}>
-      <div className={`${utilities["flex-row"]} ${utilities["height-100"]}`}>
+      <div className={`${utilities["flex-col-evenly"]} ${utilities["height-100"]}`}>
         <LetsGo />
         <GameControls />
         <QuestionsMatrix />
         {userData.locked && <LockTimer expiryTimestamp={new Date(userData.lockExpires)}/>} 
-        <Pyramide correctCount={correctCount} incomingResult={result} />
+        {/* <Pyramide correctCount={correctCount} incomingResult={result} /> */}
       </div> 
     </Suspense> 
   );
