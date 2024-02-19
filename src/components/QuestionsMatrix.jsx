@@ -80,7 +80,7 @@ const QuestionsMatrix = () => {
   useEffect(() => {
     if (eventStart && livepoints) {
       setQuestions(fetchQuestion.data);
-      // setTimer(true) // ! here
+      setTimer(true) // ! here
       setResult("current");
   }
   }, [correctCount, eventStart]);
@@ -100,7 +100,7 @@ const QuestionsMatrix = () => {
               <AnswerBtn option={option} key={index} />
             ))}
           </div>
-            {/* <Timer expiryTimestamp={timerDuration} />  // todo return it!! */}
+            <Timer expiryTimestamp={timerDuration} />  
         </motion.div>
    )
   }

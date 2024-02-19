@@ -1,5 +1,4 @@
 .layout {
-  // border: 5px solid green;
   height: inherit; 
   display: flex;
   flex-direction: column-reverse;
@@ -7,7 +6,6 @@
 }
 
 .childrensWrapper {
-  // border: 2px solid red;
   flex-grow: 1;
   width: 80%;
   max-width: 1200px;
