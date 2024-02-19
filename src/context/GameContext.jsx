@@ -27,8 +27,6 @@ export const GameContextProvider = ({children}) => {
   const [result, setResult] = useState("current"); 
   const [eventStart, setEventStart] = useState(false); 
   const [timer, setTimer] = useState(false); 
-  // const [timerDuration, setTimerDuration] = useState(Date.now() + 45000); // ! here 
-  const [timerDuration, setTimerDuration] = useState(Date.now() + 60000); // ! here 
   const [joker, setJoker] = useState(true); 
   const [controls, setControls] = useState(false); 
   const [questions, setQuestions] = useState(null); 
@@ -101,8 +99,6 @@ export const GameContextProvider = ({children}) => {
       setEventStart,
       timer, 
       setTimer,
-      timerDuration, 
-      setTimerDuration,
       stopRound, // function
       questTimer, // function
       joker,

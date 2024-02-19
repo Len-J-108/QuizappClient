@@ -35,7 +35,6 @@ const QuestionsMatrix = () => {
     pause, 
     setPause,
     fetchURLS, 
-    timerDuration,
   } = useContext(GameContext);
   
   // useSWR conditional on eventStart
@@ -100,7 +99,7 @@ const QuestionsMatrix = () => {
               <AnswerBtn option={option} key={index} />
             ))}
           </div>
-            <Timer expiryTimestamp={timerDuration} />  
+            {/* <Timer />   */}
         </motion.div>
    )
   }

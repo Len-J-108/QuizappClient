@@ -1,0 +1,29 @@
+@keyframes blinker {
+  0% {
+    opacity: 1
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+.blink {
+  animation: blinker 2s infinite;
+}
+
+.timer-position {
+  position: fixed;
+  top: clamp(20px, 30%, 200px);
+  left: clamp(2%, 10%, 200px);
+  width: 100px;
+  height: 100px;
+}
+
+@media  (max-width: 600px) {
+  .timer-position {
+    left: 10px;
+  }
+}

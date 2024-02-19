@@ -62,7 +62,7 @@ const GamePage = () => {
         <GameControls />
         <QuestionsMatrix />
         {userData.locked && <LockTimer expiryTimestamp={new Date(userData.lockExpires)}/>} 
-        {/* <Pyramide correctCount={correctCount} incomingResult={result} /> */}
+        <Pyramide correctCount={correctCount} incomingResult={result} />
       </div> 
     </Suspense> 
   );

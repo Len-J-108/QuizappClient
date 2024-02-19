@@ -2,8 +2,9 @@ import {useEffect, useContext, useState} from 'react';
 import { useTimer } from 'react-timer-hook';
 import timeOver from "./timeOver.jsx";
 import GameContext from '../context/GameContext.jsx';
+import { CircularProgressbar } from 'react-circular-progressbar';
 import "react-circular-progressbar/dist/styles.css";
-
+import '../styles/timer.css';
 
 function Timer({ expiryTimestamp }) {
 // react-timer-hook
@@ -21,7 +22,7 @@ function Timer({ expiryTimestamp }) {
 
 // States
   const [timerValue, setTimerValue] = useState(100);
-  const [timerEnd, setTimerEnd] = useState(Date.now() + 45000)
+  const [timerEnd, setTimerEnd] = useState(Date.now() + 45000) 
 
 // Function when time is over
   const timeIsUp = () => {
@@ -44,7 +45,7 @@ function Timer({ expiryTimestamp }) {
 // Start Timer on render
   useEffect(() => {
     const time = new Date();
-    restart(time.setSeconds(time.getSeconds() + 45));
+    restart(time.setSeconds(time.getSeconds() + 45)); 
     microTime();
     return () => { //  Pause Timer on unmount (when timer state is false)
       pause();
@@ -54,16 +55,20 @@ function Timer({ expiryTimestamp }) {
   return (
     <>
     {result === "current" && eventStart && !allCorrect && (
-      <div className="progress-bar">
-        <div
-          className={`progress-bar-fill ${
-            timerValue > 66 ? "green" : timerValue > 33 ? "orange" : "red"
-          }`}
-          style={{ width: `${timerValue}%` }}
-          ></div>
-        <div className={`time-display ${seconds <= 15 ? "blink" : ""}`}>
-          {seconds} sec.
-        </div>
+      <div style={{ width: 100, height: 100}}  >
+        <CircularProgressbar 
+          value={timerValue} 
+          text={seconds} 
+          counterClockwise="true" 
+          styles={{path: {
+            stroke: `${timerValue > 66 ? 'green' : timerValue > 33 ? 'orange' : 'red'}`,
+          },
+          text: {
+            fill: 'white',
+          }
+        }}
+        className={timerValue < 25 ? 'timer-position blink' : 'timer-position'}
+          />
       </div>
     )}
   </>
