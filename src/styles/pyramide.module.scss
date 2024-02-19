@@ -1,0 +1,99 @@
+.stufen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 15px;
+}
+
+.level-single {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    font-weight: 500;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.pyramide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.current {
+    position: relative;
+    transform: scale(1.2);
+    border-color: green;
+}
+
+.current::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 1.6rem;
+    content: "\f178";
+    color: green;
+    position: absolute;
+    left: -70px;
+    width: 50px;
+    animation: xx 2s infinite;
+} 
+
+.answered {
+    background: rgb(162, 245, 162);
+    color: black;
+}
+
+.notAnswered {
+    border-color: rgb(116, 3, 3);
+}
+
+@keyframes xx {
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.stufe10 {
+    width: 200px;
+}
+
+.stufe9 {
+    width: 180px;
+}
+
+.stufe8 {
+    width: 160px;
+    background-color: orange;
+}
+
+.stufe7 {
+    width: 140px;
+}
+
+.stufe6 {
+    width: 120px;
+}
+
+.stufe5 {
+    width: 100px;
+}
+
+.stufe4 {
+    width: 80px;
+    background-color: orange;
+}
+
+.stufe3 {
+    width: 60px;
+}
+
+.stufe2 {
+    width: 40px;
+}
+
+.stufe1 {
+    width: 30px;
+}
+

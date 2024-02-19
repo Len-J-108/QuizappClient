@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import "../styles/Pyramide.css"
+import cl from '../styles/pyramide.module.scss';
 import GameContext from "../context/GameContext";
 
 const Pyramide = ({ correctCount, incomingResult }) => {
@@ -11,20 +11,25 @@ const Pyramide = ({ correctCount, incomingResult }) => {
   if (eventStart && controls) {
 
     return (
-      <div className="stufen">
-      <div className="win">Gewinnstufen</div>
+      <div className={cl.stufen}>
+      <div className="win">Level</div>
       {stufen.map((stufe) => {
-        let classNameChoice = "";
-        if (incomingResult === "current" && stufe === selectedStufe) {
-          classNameChoice = "current";
-        } else if (incomingResult === "Richtig!" && stufe === selectedStufe) {
-          classNameChoice = "correct";
-        } else if (incomingResult === "Falsch!" && stufe === selectedStufe) {
-          classNameChoice = "wrong";
+        // Current Level
+        if (stufe === selectedStufe) {
+          return (
+            <div key={stufe} className={`${cl.pyramide} ${cl[`stufe${stufe}`]} ${cl["level-single"]} ${cl.current}`}>
+              {stufe}
+            </div>
+          );
         }
 
-        if (stufe < selectedStufe) {
-          classNameChoice += "answered";
+        // Answered levels
+        if (selectedStufe > stufe){
+          return (
+            <div key={stufe} className={`${cl.pyramide} ${cl[`stufe${stufe}`]} ${cl["level-single"]} ${cl.answered}`}>
+              {stufe}
+            </div>
+          );
         }
 
         // Check if the device is a mobile device
@@ -35,9 +40,10 @@ const Pyramide = ({ correctCount, incomingResult }) => {
           return null;
         }
 
+        // Other rest levels
         return (
-          <div key={stufe} className={`stufe${stufe} ${classNameChoice} pyramide`}>
-            <span className="text">{stufe}</span>
+          <div key={stufe} className={`${cl.pyramide} ${cl[`stufe${stufe}`]} ${cl["level-single"]} ${cl.notAnswered}`}>
+            {stufe}
           </div>
         );
       })}
