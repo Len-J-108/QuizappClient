@@ -22,6 +22,13 @@ const Pyramide = ({ correctCount, incomingResult }) => {
             </div>
           );
         }
+        // Check if the device is a mobile device
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        // If it is a mobile device and the current step is not the selected step, hide the step
+        if (isMobile && stufe !== selectedStufe) {
+          return null;
+        }
 
         // Answered levels
         if (selectedStufe > stufe){
@@ -32,13 +39,6 @@ const Pyramide = ({ correctCount, incomingResult }) => {
           );
         }
 
-        // Check if the device is a mobile device
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-        // If it is a mobile device and the current step is not the selected step, hide the step
-        if (isMobile && stufe !== selectedStufe) {
-          return null;
-        }
 
         // Other rest levels
         return (

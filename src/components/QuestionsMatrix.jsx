@@ -54,7 +54,7 @@ const QuestionsMatrix = () => {
               return 
             } else {
             setResult("True");
-            questTimer(400); // ! watiTime between questions
+            questTimer(2000); // ! watiTime between questions
               }
 
           })
