@@ -49,7 +49,7 @@ const GamePage = () => {
   // render Win Message when all correct
   if (allCorrect) {
     return (
-      <div id="winText" className="winText pulse">
+      <div id="winText" className={`${cl.winText} ${cl.pulse}`}>
         Won
       </div>
     )

@@ -54,7 +54,7 @@ const QuestionsMatrix = () => {
               return 
             } else {
             setResult("True");
-            questTimer(2000); // ! watiTime between questions
+            questTimer(200); // ! watiTime between questions
               }
 
           })
@@ -79,7 +79,7 @@ const QuestionsMatrix = () => {
   useEffect(() => {
     if (eventStart && livepoints) {
       setQuestions(fetchQuestion.data);
-      setTimer(true) // ! here
+      setTimer(true);
       setResult("current");
   }
   }, [correctCount, eventStart]);

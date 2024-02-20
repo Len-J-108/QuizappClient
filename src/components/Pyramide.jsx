@@ -12,7 +12,7 @@ const Pyramide = ({ correctCount, incomingResult }) => {
 
     return (
       <div className={cl.stufen}>
-      <div className="win">Level</div>
+      <div className={cl.heading}>Level</div>
       {stufen.map((stufe) => {
         // Current Level
         if (stufe === selectedStufe) {
