@@ -27,7 +27,9 @@ const GamePage = () => {
         initial={{ opacity: 0}}
         animate={{ opacity: 1 }}
         transition={{ duration: 2.5 }}
-        className="answer"><h2>{result}</h2></motion.div>
+        className={cl["answer-wrapper"]}>
+        <h2 className={result==='True' ? cl.green : result==='False' ? cl.red : cl.neutral}>  {result} 
+        </h2></motion.div>
     )
   }
 

@@ -1,0 +1,33 @@
+.wrapper{
+  width: clamp(250px, 50%, 800px);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  h1 {
+    margin-left: 3rem;
+    font-size: 3rem;
+    & :nth-child(1) {
+      color: hsl(120, 83%, 60%);
+      font-size: 5rem;
+    }
+    & :nth-child(2) {
+      color: hsl(204, 100%, 73%);
+    }
+    & :nth-child(4) {
+      color: hsl(7, 100%, 45%);
+    }
+  }
+  p {
+    font-size: 1.5rem;
+    line-height: 33px;
+    &::first-letter {
+      font-size: 2rem;
+    }
+  }
+}
+
+.reverse {
+  color: hsl(56, 100%, 75%);
+  transform: scale(3) !important;
+  margin-inline: 10px;
+}

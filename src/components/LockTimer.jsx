@@ -2,6 +2,7 @@ import { useTimer } from 'react-timer-hook';
 import API from '../axios.js';
 import { useContext } from 'react';
 import GameContext from '../context/GameContext.jsx';
+import cl from '../styles/lockTimer.module.scss';
 
 
 function LockTimer({ expiryTimestamp }) {
@@ -20,14 +21,16 @@ function LockTimer({ expiryTimestamp }) {
   })
 
     return (
-      <>
-        <p>...You will have to wait</p>
+      <div className={cl.wrapper}>
+        <p className={cl.txt}>...You will have to wait</p>
       <div style={{textAlign: 'center'}}>
         <div style={{fontSize: '50px', color: 'orange'}}>
-          <span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
+          {hours ? <span>{hours}:</span> : null}
+          {minutes ? <span>{minutes}:</span> : null}
+          <span>{seconds}</span>
         </div>
       </div>
-      </>
+      </div>
     );
   }
 

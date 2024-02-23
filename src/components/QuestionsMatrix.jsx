@@ -54,7 +54,7 @@ const QuestionsMatrix = () => {
               return 
             } else {
             setResult("True");
-            questTimer(200); // ! watiTime between questions
+            questTimer(2000); // ! watiTime between questions
               }
 
           })
@@ -99,7 +99,7 @@ const QuestionsMatrix = () => {
               <AnswerBtn option={option} key={index} />
             ))}
           </div>
-            {/* <Timer />   */}
+            <Timer />  
         </motion.div>
    )
   }

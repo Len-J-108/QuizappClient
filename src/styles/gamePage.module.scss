@@ -37,3 +37,30 @@
     transform: scale(1);
   }
 }
+
+.answer-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    font-size: 2rem;
+    letter-spacing: 5px;
+    &::first-letter {
+    }
+  }
+}
+
+.green  {
+  color: hsl(120, 100%, 77%);
+}
+
+.red {
+  color: hsl(0, 43%, 60%);
+}
+
+.neutral {
+  color: hsl(180, 85%, 82%);
+}
+

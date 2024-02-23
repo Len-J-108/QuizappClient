@@ -39,7 +39,7 @@ const GameControls = () => {
         const answer = response.data;
         if (answer.setPoints === true) {
           setResult(
-            `${answer.points} point were added to your score`
+            `${answer.points} points has been added to your score`
           );
           setTimeout(() => {setResult("current")}, 5000)
         }
@@ -72,7 +72,7 @@ const GameControls = () => {
               className={cl["game-btn"]}
               type="button"
               onClick={() => {
-                setResult("Runde beendet!"), stopRound(), userStoppedRound();
+                setResult("End of round"), stopRound(), userStoppedRound();
               }}
               >
               End Game

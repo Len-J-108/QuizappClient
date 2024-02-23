@@ -1,0 +1,10 @@
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  .txt {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+  }
+}
