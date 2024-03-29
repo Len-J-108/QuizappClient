@@ -14,3 +14,26 @@
   left: 10%;
   
 }
+
+@media (max-width: 1000px) {
+  .userdata {
+    left: 5%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .userdata {
+    left: 5%;
+    top: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .userdata {
+    display: none;
+  }
+  .header {
+    height: fit-content;
+ 
+  }
+}

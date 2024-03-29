@@ -1,3 +1,7 @@
+.heartsWrapper {
+  display: flex;
+  flex-wrap: no-wrap;
+}
 .game-controls-wrapper {
   display: flex;
   flex-direction: row;
@@ -81,4 +85,18 @@
   top: 0;
   border-radius: 10px;
   border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+  .game-btn {
+    width: 70px;
+    height: 70px;
+    font-size: .8rem;
+    margin-inline: 1rem;
+    padding: 0;
+  }
+  .game-controls-wrapper {
+    justify-content: center;
+    gap: 0;
+  }
 }

@@ -9,3 +9,9 @@
 .btn {
   width: 150px;
 }
+
+@media (max-width: 600px) {
+  .list {
+    flex-direction: column;
+  }
+}

@@ -9,3 +9,9 @@
 .gray {
   color: rgb(187, 186, 186);
 }
+
+@media (max-width: 640px) {
+  .red, .gray {
+    transform: scale(80%);
+  }
+}

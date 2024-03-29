@@ -62,7 +62,7 @@ const GameControls = () => {
             50/50 Joker
             </button>
           <IconContext.Provider value={{  className:"heart" }}>
-            <div >
+            <div className={cl.heartsWrapper} >
               < IoHeartSharp className={livepoints>=1 ? 'red' : 'gray'} />
               < IoHeartSharp className={livepoints>=2 ? 'red' : 'gray'} />
               < IoHeartSharp className={livepoints>=3 ? 'red' : 'gray'} />

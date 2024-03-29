@@ -117,3 +117,13 @@
   border-color: yellow;
 }
 
+@media (max-width: 600px) {
+  .answersWapper {
+  gap: 1rem;
+  justify-content: space-evenly;
+  .answerBtn {
+    flex: 1 1 100%;
+    }
+}  
+}
+

@@ -104,7 +104,28 @@
     width: 30px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
+   .stufen :not(.current, .heading) { // shows only current level in SM
+    display: none;
+  }
+  
 
+ .current {
+    width: 30px;
+    &::before {
+      content: ''; // hides Arrow in SM
+    }
+  }
 }
 
+@media (max-width: 600px) {
+  .heading {
+    font-size: 1.1rem;
+    position: relative;
+    right: 10px;
+  }
+  .stufen {
+      right: 15px;
+  }
+ 
+}
