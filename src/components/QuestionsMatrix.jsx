@@ -99,7 +99,7 @@ const QuestionsMatrix = () => {
               <AnswerBtn option={option} key={index} />
             ))}
           </div>
-            <Timer />  
+           {/*<Timer /> */} 
         </motion.div>
    )
   }
