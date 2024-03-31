@@ -17,6 +17,7 @@ const GameControls = () => {
 
   const {
     controls, 
+    joker,
     setJoker, 
     setResult, 
     stopRound,
@@ -56,11 +57,12 @@ const GameControls = () => {
         exit={exitAnimation}    
         className={cl["game-controls-wrapper"]}
         >
-            <button
-            onClick={() => setJoker(false)}
-            className={cl["game-btn"]}>
-            50/50 Joker
-            </button>
+        <button
+        onClick={() => setJoker(false)}
+        className={joker ? cl["game-btn"] : `${cl["game-btn"]} ${cl.disabled}`}>
+        50/50 Joker
+        </button>
+
           <IconContext.Provider value={{  className:"heart" }}>
             <div className={cl.heartsWrapper} >
               < IoHeartSharp className={livepoints>=1 ? 'red' : 'gray'} />

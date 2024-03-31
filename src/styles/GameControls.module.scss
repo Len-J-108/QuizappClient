@@ -32,6 +32,11 @@
   transition: transform .1s;
 }
 
+.disabled {
+  cursor: none;
+  filter: blur(10px);
+}
+
 .game-btn:hover {
   // transform: scale(1.02)
 }
