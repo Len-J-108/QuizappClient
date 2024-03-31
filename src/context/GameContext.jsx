@@ -45,15 +45,18 @@ export const GameContextProvider = ({children}) => {
 
   // useSWR conditional on eventStart
   const fetchUserData = useSWR(fetchURLS.userData, fetcher, {suspense: true});
-  const fetchJoker = useSWR(joker ? null : (fetchURLS.joker + `/${questions.question_id}`), fetcher, {suspense: true});
+  const fetchJoker = useSWR(joker ? null : (fetchURLS.joker + `/${questions.question_id}`), fetcher, {suspense: false});
   
   useEffect(() => {
     mutate(fetchURLS.userData); // this triggers the socket in the backend for userData
   }, [isLoggedIn])
 
   useEffect(() => {
+    if (!joker){
+    console.log('JOker');
     if (fetchJoker.data) {
       setQuestions(fetchJoker.data);
+      }
     }
   }, [joker])
 
