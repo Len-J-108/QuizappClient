@@ -2,7 +2,7 @@ import { useContext } from "react"
 import GameContext from "../context/GameContext"
 import API from '../axios.js';
 import { motion } from "framer-motion"
-import cl from '../styles/GameControls.module.scss';
+import cl from '../styles/GameControls.module.scss'g
 import { IconContext } from "react-icons";
 import { IoHeartSharp } from "react-icons/io5";
 import '../styles/hearts.css';

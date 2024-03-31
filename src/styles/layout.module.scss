@@ -2,8 +2,9 @@
   height: inherit; 
   display: flex;
   flex-direction: column-reverse;
-  justify-content: center;
+  // justify-content: center;
 }
+
 
 .childrensWrapper {
   flex-grow: 1;
@@ -11,6 +12,7 @@
   max-width: 1200px;
   align-self:center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

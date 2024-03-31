@@ -13,5 +13,9 @@
 @media (max-width: 600px) {
   .list {
     flex-direction: column;
+    a {
+      position: relative;
+      right: 12%;
+    }
   }
 }

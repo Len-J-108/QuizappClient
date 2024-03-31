@@ -32,7 +32,7 @@ const Navbar = () => {
                       padding: isActive ? '0 0 7px 0' : '',
                       }
                     }}>
-                    <Button className={classes.btn} variant="outlined" sx={{color: 'white', borderColor: 'white',}}>{link.name}</Button>
+                    <Button className={classes.btn} variant="outlined" sx={{color: 'white', borderColor: 'white', fontSize: '1.5rem'}}>{link.name}</Button>
                 </NavLink>
               )
             }

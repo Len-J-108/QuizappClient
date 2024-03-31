@@ -3,6 +3,9 @@
   flex-wrap: no-wrap;
 }
 .game-controls-wrapper {
+  // flex: 0 0 10%;
+  min-height: fit-content;
+  max-height: 20%;
   display: flex;
   flex-direction: row;
   justify-content:space-around;
@@ -25,7 +28,7 @@
   position: relative;
   z-index: 10;
   border-radius: 50%;
-  font-size: 1.1rem;
+  font-size: 1.8rem;
   transition: transform .1s;
 }
 
@@ -91,12 +94,18 @@
   .game-btn {
     width: 70px;
     height: 70px;
-    font-size: .8rem;
+    // font-size: .8rem;
     margin-inline: 1rem;
     padding: 0;
   }
   .game-controls-wrapper {
     justify-content: center;
     gap: 0;
+  }
+}
+ 
+@media (max-height: 790px) {
+.game-controls-wrapper {
+   margin-bottom: 0; 
   }
 }
