@@ -2,13 +2,16 @@ import {  Route, Routes } from "react-router-dom";
 import { GameContextProvider } from "./context/GameContext.jsx";
 import Layout from "./Layout.jsx";
 import routes from "./routes/routes.jsx";
-// import './styles/main.css';
-
+import {ErrorBoundary} from 'react-error-boundary';
+import ErrorPage from './components/ErrorPage.jsx';
+import './styles/main.css';
 
 
 function App() {
 
   return (
+    <ErrorBoundary
+      FallbackComponent={ErrorPage}>
       <GameContextProvider>
         <Layout>
           <Routes>
@@ -18,6 +21,7 @@ function App() {
             </Routes>
         </Layout>
       </GameContextProvider>
+    </ErrorBoundary>
   );
 }
 
