@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from 'yup';
 import cl from './styles/forms.module.scss';
 import toast from 'react-hot-toast';
-
+import {URL} from './utils/url.js';
 
 const RegisterPage = () => {
 
@@ -24,7 +24,7 @@ const RegisterPage = () => {
 
   const registerUser = async (data) => {
     try {
-      await axios.post("http://localhost:5000/users/register", data);
+      await axios.post(URL, data);
       toast.success("Erfolgreich registriert!");
       navigate("/login");
     } catch (err) {

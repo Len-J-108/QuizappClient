@@ -6,6 +6,7 @@ import cl from '../styles/GameControls.module.scss';
 import { IconContext } from "react-icons";
 import { IoHeartSharp } from "react-icons/io5";
 import '../styles/hearts.css';
+import {URL} from '../utils/url.js';
 
 const GameControls = () => {
 
@@ -30,7 +31,7 @@ const GameControls = () => {
   const userStoppedRound = () => {
     API    
       .post(
-        "http://localhost:5000/users/user-stopped",
+        `${URL}/users/user-stopped`,
         {
           question_id: questions.question_id,
         },

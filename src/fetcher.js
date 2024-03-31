@@ -1,7 +1,8 @@
 import axios from "./axios";
+import {URL} from './utils/url.js';
 
 const ee = axios.create({
-  baseURL: "http://localhost:5173/",
+  baseURL: URL,
   withCredentials: true,
   credentials: "include",
 });

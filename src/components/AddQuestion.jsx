@@ -2,8 +2,7 @@ import { useState } from 'react'
 import axios from 'axios';
 import cl from '../styles/forms.module.scss';
 import ButtonOne from '../elements/buttonOne';
-
-const url = 'http://localhost:5000'
+import {URL} from '../utils/url.js';
 
 function AddQuestion() {
   const [quest, setQuest] = useState({
@@ -37,7 +36,7 @@ function AddQuestion() {
     console.log(data)
 
     //fetch
-    axios.post(`${url}/questions/add-one`, data)
+    axios.post(`${URL}/questions/add-one`, data)
       .then(() => console.log('Question added'))
       .then(() => alert('Question added'))
       .then(()=> {

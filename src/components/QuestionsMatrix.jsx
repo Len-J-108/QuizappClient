@@ -10,6 +10,7 @@ import utilities from '../styles/utilities.module.scss';
 import cl from '../styles/questionsMatrix.module.scss';
 import Question from "../elements/Question.jsx";
 import Typewriter from "../customHooks/useTypewriter.jsx";
+import {URL} from '../utils/url.js';
 
 const QuestionsMatrix = () => {
 
@@ -46,7 +47,7 @@ const QuestionsMatrix = () => {
       setControls(false);
       setTimer(false);
       if (fetchCheckAnswer.data === pause) {
-        API.get(`http://localhost:5000/questions/answer-right/${questions.question_id}`)
+        API.get(`${URL}/questions/answer-right/${questions.question_id}`)
           .then(() => {
             if (correctCount + 1 === 10 ) {
               setAllCorrect(true);
@@ -61,7 +62,7 @@ const QuestionsMatrix = () => {
       } else {
         // case answer is wrong
         console.log('answer is wrong');
-        API.get(`http://localhost:5000/questions/answer-wrong/${questions.question_id}`)
+        API.get(`${URL}/questions/answer-wrong/${questions.question_id}`)
           .then(() => {
             setResult("False");
             setJoker(false);

@@ -3,6 +3,7 @@ import API from '../axios.js';
 import { useContext } from 'react';
 import GameContext from '../context/GameContext.jsx';
 import cl from '../styles/lockTimer.module.scss';
+import {URL} from '../utils/url.js';
 
 
 function LockTimer({ expiryTimestamp }) {
@@ -15,7 +16,7 @@ function LockTimer({ expiryTimestamp }) {
     hours,
     // isRunning,
   } = useTimer({ expiryTimestamp, onExpire: () => {  
-    API.get("http://localhost:5000/users/get-user-data");
+    API.get(`${URL}/users/get-user-data`);
     setResult("current");
     }
   })

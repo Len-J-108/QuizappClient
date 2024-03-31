@@ -1,6 +1,8 @@
 import { useEffect, useState, useContext } from "react";
 import "../styles/Highscore.css";
 import GameContext from "../context/GameContext";
+import {URL} from '../utils/url.js';
+
 function Highscore() {
   const [highscores, setHighscores] = useState([]);
 
@@ -9,7 +11,7 @@ function Highscore() {
   useEffect(() => {
     setAllCorrect(false); // resets Confetti & WinMessage in QuestionPage.jsx
     setResult("current");
-    fetch("http://localhost:5000/users/all-users")
+    fetch(`${URL}/users/all-users`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Netzwerkantwort war nicht ok");

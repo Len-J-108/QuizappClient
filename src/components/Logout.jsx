@@ -3,6 +3,7 @@ import axios from "../axios";
 import { useNavigate } from "react-router-dom";
 import GameContext from "../context/GameContext.jsx";
 import toast from 'react-hot-toast';
+import {URL} from '../utils/url.js';
 
 const Logout = () => {
   let navigate = useNavigate();
@@ -10,7 +11,7 @@ const Logout = () => {
     
     async function logoutUser() {
       try {
-        const { data } = await axios.get("http://localhost:5000/users/logout");
+        const { data } = await axios.get(`${URL}/users/logout`);
         if (data.logout) {
           setIsLoggedIn(false);
           setUserData({}); 

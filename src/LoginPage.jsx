@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from 'yup';
 import cl from './styles/forms.module.scss';
+import {URL} from './utils/url.js';
 
 const LoginPage = () => {
 
@@ -25,7 +26,7 @@ const LoginPage = () => {
 
   const signIn = async (data) => {
     try {
-      await API.post("http://localhost:5000/users/login", data)
+      await API.post(URL, data)
         .then((response) => { 
           const data = response.data;
           if (data.login) {

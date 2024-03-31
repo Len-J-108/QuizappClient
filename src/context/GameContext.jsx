@@ -2,6 +2,7 @@ import { createContext, useState, useEffect} from "react"
 import { io } from "socket.io-client";
 import API from '../axios.js';
 import useSWR, {mutate} from 'swr'
+import {URL} from './utils/url.js';
 
 
 // UseSWR Hook fetcher
@@ -12,7 +13,7 @@ const fetcher = url => API.get(url).then(res => {
 const GameContext = createContext({})
 
 // socket variable outside function with backend url
-const socket = io("http://localhost:5000");
+const socket = io(URL);
 
 export const GameContextProvider = ({children}) => {
   
@@ -33,12 +34,12 @@ export const GameContextProvider = ({children}) => {
   const [allCorrect, setAllCorrect] = useState(false);
   const [pause, setPause] = useState(false) 
   const [fetchURLS] = useState({
-    question: 'http://localhost:5000/questions/get-game-question',
-    answer: "http://localhost:5000/questions/check-answer",
-    isRight: "http://localhost:5000/questions/answer-right",
-    isWrong: "http://localhost:5000/questions/answer-wrong",
-    userData: "http://localhost:5000/users/get-user-data",
-    joker: "http://localhost:5000/questions/joker",
+    question: `${URL}/questions/get-game-question`,
+    answer: `${URL}/questions/check-answer`,
+    isRight: `${URL}/questions/answer-right`,
+    isWrong: `${URL}/questions/answer-wrong`,
+    userData: `${URL}/users/get-user-data`,
+    joker: `${URL}/questions/joker`,
   })
   
 

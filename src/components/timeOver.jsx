@@ -1,8 +1,9 @@
 import axios from "axios";
+import {URL} from '../utils/url.js';
 
 const timeOver = () => {
   axios.post(
-    "http://localhost:5000/users/timeOver",
+    `${URL}/users/timeOver`,
     { status: "Zeit abgelaufen" },
     { withCredentials: true }
   );
