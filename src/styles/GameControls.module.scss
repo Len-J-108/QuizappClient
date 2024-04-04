@@ -3,7 +3,6 @@
   flex-wrap: no-wrap;
 }
 .game-controls-wrapper {
-  // flex: 0 0 10%;
   min-height: fit-content;
   max-height: 20%;
   display: flex;
@@ -11,9 +10,10 @@
   justify-content:space-around;
   align-items: center;
   gap: 3rem;
-  // padding-block: 4rem;
   order: 3;
   margin-block: 2rem;
+  position: relative;
+  bottom: 10px;
 }
 
 .game-btn {
