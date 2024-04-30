@@ -1,1 +1,1 @@
-export const URL = 'backendApiAddress'; 
+export const URL = "https://quizapp-xquw.onrender.com";
