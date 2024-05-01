@@ -1,1 +1,1 @@
-export const URL = "https://quizapp-xquw.onrender.com";
+export const URL = "https://quizappbackend-9th3.onrender.com";
